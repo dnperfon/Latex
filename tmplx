@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{minted}
+
+\title{\textbf{Logbook - Wargamming}}
+\author{Daniela Fontinha - a52076 }
+\date  {8 Fevereiro 2023}
+
+\begin{document}
+\maketitle
+
+\begin{quote}
+  \textit{  O ciberespaço foi reconhecido pela NATO como um novo domínio operacional, tão crítico para a defesa nacional quanto os domínios da terra, do mar, do ar e do espaço.}
+\end{quote} 
+
+\section*{Aula 1 - 15 Nov}
+
+\subsection*{Cibersegurança VS. Ciberdefesa}
+
+O significado de security (segurança) em português, traduz dois conceitos de security e  safety. Os variados conceitos que existem relativamente à segurança podem ser diferentes de país para país. Por isso, é necessário estabelecer uma ideia base do que se pretende com o significado de segurança. Para isso foi preciso compreender o ”espaço de segurança", dito como cyberspace. 
+
+
+
+É ainda mais difícil distinguir o que a legal e cultural compreensão das funções e deveres, se o Estado, face aos direitos civis e económicos, tem um enorme impacto. Um conceito de "Defesa" devidamente capitalizado, apela a uma função básica de Estado para proteger contra as ameaças externas. Um conceito principalmente identificado com as Forças Armadas, bem como com as suas capacidades militares em defesa de uma nação inteira.
+
+
+\subsection*{Definição de uma estratégia nacional de defesa}
+
+Portugal tem uma estratégia nacional de cibersegurança desde 2015. Em 2019 essa estratégia foi revista dando assim origem à estratégia nacional para a segurança do ciberespaço.
+
+
+\textbf{Objetivos Estratégicos:}
+
+\begin{itemize}
+    \item Fortalecer e garantir a resiliência digital nacional, salvaguardando a segurança do ciberespaço de interesse nacional face às ameaças que possam comprometer ou provocar a disrupção das redes e sistemas de informação essenciais à sociedade.
+
+    \item Promover a inovação fomentando a capacidade nacional de inovação, afirmando o ciberespaço como um domínio de desenvolvimento económico, social, cultural e de prosperidade.
+
+    \item Gerar e garantir recursos contribuindo para obter e assegurar a alocação de recursos adequados para a edificação e sustentação da capacidade nacional para a segurança do ciberespaço.
+    
+\end{itemize}
+
+\newpage
+\subsection*{Cadeia de Ataque}
+\subsubsection*{Cyber Kill Chain}
+De modo a mitigar o impacto que uma organização pode eventualmente sofrer de ataques cibernéticos em potencial, segue-se um conjunto de etapas da Cyber Kill Chain que embora seja debatido ainda é o processo mais estabelecido para identificar os estágios de um ataque. Segue-se o esquece desse processo:
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.75]{images/ckc.png}
+	\caption{Cyber Kill Chain process.}
+	\label{fig:ckcprocess}
+\end{figure}
+
+\subsubsection*{Mitre ATT&CK }
+
+A estrutura ATT&CK funciona como uma autoridade sobre os comportamentos e as técnicas que os hackers usam contra as organizações. Ela elimina a ambiguidade e descreve um vocabulário centralizado para profissionais do setor. Isso ajuda-os a discutir e colaborar sobre como combater contra os ataques e a aplicar medidas práticas de segurança.
+
+O ATT&CK adiciona rigor e detalhes além da inteligência contra ameaças e das técnicas de ferramentas que são úteis em ataques oportunistas e menos direcionados. O Pyramid of Pain explica como ele complementa outros indicadores típicos de hoje:
+
+\subsubsection*{Mitre Defend}
+
+Existe uma necessidade cada vez maior de criar um modelo que possa especificar precisamente componentes e capacidades de contramedida de cibersegurança. Além disso, é necessário que os profissionais saibam não só quais as ameaças que uma capacidade afirma abordar, mas especificamente como essas ameaças são abordadas numa perspetiva de engenharia, e em que circunstâncias a solução funcionaria. Este conhecimento é essencial para estimar a aplicabilidade operacional, identificar pontos fortes e fracos e desenvolver soluções empresariais que incluam múltiplas capacidades.
+
+Para fazer face a esta necessidade recorrente a curto prazo, foi criado o D3FEND, um quadro em que se codifica uma base de conhecimento de contramedida, mais especificamente, um gráfico de conhecimento. O gráfico contém tipos e relações semanticamente rigorosos que definem tanto os conceitos-chave no domínio da contramedida de cibersegurança como as relações necessárias para ligar esses conceitos uns aos outros.
+
+\subsubsection*{Palavras Chave}
+
+\begin{itemize}
+    \item \textbf{Ciberespaço} é um espaço no mundo da comunicação no qual não é necessária a presença física do homem para constituir a comunicação como fonte de relacionamento. O ciberespaço não se resume apenas à conexão via internet. Ele é um ambiente onde ocorre a interação dos humanos com as tecnologias, ou seja: Smartphone, pagers, entre tantos outros.
+
+    \item \textbf{Cibersegurança} é uma prática que protege computadores e servidores, dispositivos móveis, sistemas eletrónicos, redes e dados contra ataques maliciosos. Também pode ser chamada de segurança da tecnologia da informação.
+
+    \item \textbf{Ciberdefesa} é um conjunto de ações que pretende prevenir ou neutralizar tentativas de intrusão ou de ataque perpetradas através da Internet ou de outra rede de computadores.
+
+    \item \textbf{Orientações políticas} é a tendência geral que um indivíduo ou grupo tem nas suas opiniões sobre como a sociedade se deve organizar e se guiar. Geralmente é descrita por meio de classificações. No sentido de responder à que será a melhor definição de segurança, muitas das vezes há divergências por conta de orientações políticas.
+
+    \item \textbf{Lockheed Martin} é uma empresa fabricante de produtos aeroespaciais criada em 1995, resultante da fusão da Lockheed Corporation e da Martin Marietta.
+    
+\end{itemize}
+
+\section*{Aula 4 -26 Nov}
+
+\subsection*{Bind Shell & Reverse Shell}
+
+\begin{itemize}
+    \item Uma \textbf{Bind Shell} é uma espécie de configuração onde as máquinas remotas são estabelecidas com outros computadores através da rede. Na cápsula Bind, um intruso lança um serviço no computador alvo, ao qual o intruso pode ligar-se. Numa bind shell, um intruso pode ligar-se ao computador alvo e executar comandos no computador alvo. Para lançar uma bind shell, o intruso deve ter o endereço IP da vítima para aceder ao computador alvo.
+\end{itemize}
+
+    \begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.50]{images/binds.png}
+	\caption{Representação do atacante a executar bind shell da sua maquina ao servidor}
+	\label{fig:ckcprocess}
+\end{figure}
+
+\begin{itemize}
+    \item Uma \textbf{Reverse Shell} ou uma connect-back é uma configuração, onde o intruso deve primeiro iniciar o servidor na sua máquina, enquanto a máquina alvo terá de funcionar como um cliente que se conecta ao servidor servido pelo intruso. Após a ligação bem sucedida, o intruso pode ter acesso à casca do computador alvo.
+\end{itemize}
+
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.50]{images/revs.png}
+	\caption{O servidor tenta conectar a maquina do atacante}
+	\label{fig:ckcprocess}
+\end{figure}
+
+\newpage
+\section{ Aula 5 - 6 Dez}
+
+\subsection*{Volatility}
+
+O Volatility é um framework open source que possui licença pública GNU desenvolvido em python que é utilizado para fazer análise de dumps de memória RAM dos sistemas operacionais Linux, Windows e MAC Os; arquivos de hibernação do Windows, crash dumps entre outros. É uma ferramenta de análise de memória, com objetivo de identificar processos suspeitos que possam indicar a execução de malware e possível comprometimento da máquina.
+
+Dentro das ferramentas que o volatility tem, o primeiro plugin que se deve utilizar é o imageinfo que vai correr a memória à procura de padrões na sua estrutura que possam indicar qual versão do sistema operacional ela foi recolhida, isso é de extrema importância para que se possa utilizar o profile correto no Volatility. 
+
+\paragraph{Alguns comandos básicos:}
+
+\begin{itemize}
+    \item O seguinte comando fornece informações a respeito da imagem e do sistema operacional que se está a analisar:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ volatility -f <1>.dmp imageinfo
+\end{minted}
+
+\begin{itemize}
+    \item Para exibir uma lista de todos os processos que estavam a ser executados na imagem RAM:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ volatility -f <1>.dmp --profile=<2> pslist 
+\end{minted}
+
+\begin{itemize}
+    \item Para fazer um dump do processo:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ volatility -f <1>.dmp --profile=<2> procdump -D <3> -p <4>
+\end{minted}
+
+\textbf{1=} Nome da imagem do dump
+
+\textbf{2=} Sugested Profile(s) descrito através do primeiro comando imageinfo
+	
+\textbf{3=} Destino para o dump do processo em memória
+	
+\textbf{4=} PID do processo
+
+\begin{itemize}
+    \item O plugin imageinfo vai mostrar algumas informações relacionadas ao arquivo de memória. Sabendo desta informação, a partir de agora indicaremos o profile ao executar qualquer comando. E seguindo essa análise, utiliza-se o plugin pslist que vai exibir os processos que estavam em execução no momento da recolha.
+\end{itemize}
+
+\begin{itemize}
+    \item Exibe a árvore de processos, o que pode mostrar mais detalhes referentes ao fluxo de processos e assim se identificar alguma anomalia:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ pstree
+\end{minted}
+
+\begin{itemize}
+    \item Este plugin vai procurar possíveis injeçoes de codigo nos processos:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ malfind
+\end{minted}
+
+\begin{itemize}
+    \item Sabendo que é um potencial malware, este plugin fará o dump do binário referente a esta fase. Para isso chama-se o procdump para informar qual o PID do processo que queremos e onde o iremos guardar:
+\end{itemize}
+
+\noindent 
+\begin{minted}{bash}
+  $ procdump
+\end{minted}
+
+
+\end{document}
+
